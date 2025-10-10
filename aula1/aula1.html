@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js" defer></script>
+    <title>Aula 1</title>
+
+    <style>
+        input {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="bloco">
+            <h1>{{mensagem}}</h1>
+            <h1>{{nome}}</h1>
+            <input type="text" v-model="nome">
+        </div>
+
+        <div v-show="palavra != '' "  id="bloco">
+            <p v-if="palavra == palavraCorreta" >Acertou a palavra!</p>
+            <p v-else>Errou a palavra!</p>
+        </div>
+        <input type="text" v-model="palavra">
+
+    </div>
+</body>
+</html>
